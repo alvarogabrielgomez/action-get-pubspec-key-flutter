@@ -1,0 +1,36 @@
+name: Build & Deploy Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build & Deploy Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
+      - name: Build
+        run: npm run build
+      - name: Pack
+        run: npm run package
+
+      - name: Delete oldest releases on Github
+        uses: dev-drprasad/delete-older-releases@v0.2.0
+        with:
+          keep_latest: 0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUBACTION_TOKEN}}
+
+      - name: Upload new release
+        uses: ncipollo/release-action@v1
+        with:
+          # tag: v1.0.0.${{github.run_number}}
+          tag: v1.0.${{github.run_number}}
+          token: ${{secrets.GITHUBACTION_TOKEN}}

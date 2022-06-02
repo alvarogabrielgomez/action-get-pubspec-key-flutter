@@ -1,0 +1,26 @@
+name: "Get the Content of a Key from pubspec.yaml in a Flutter App"
+
+description: "A Github Action to get the Content of a Key from pubspec.yaml in a Flutter App"
+author: "Accentio Studios"
+
+inputs:
+  path:
+    description: "The pubspec.yaml file path. Optional. Default: `pubspec.yaml`"
+    default: pubspec.yaml
+  key:
+    description: "The key to look at. Optional. Default: `version`"
+    default: version
+
+outputs:
+  key:
+    description: "The name of the key"
+  content:
+    description: "the content of the file"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
+
+branding:
+  icon: "airplay"
+  color: "blue"

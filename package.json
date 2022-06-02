@@ -1,0 +1,37 @@
+{
+  "name": "github-actions-get-app-version-flutter",
+  "version": "1.0.0",
+  "description": "A Github Action to get the App Version from the pubspec file in Flutter App",
+  "prepare": "tsc",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "package": "ncc build lib/index.js -o dist",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarogabrielgomez/github-actions-get-app-version-flutter.git"
+  },
+  "keywords": [
+    "actions",
+    "node"
+  ],
+  "author": "Alvaro Gomez <alvaro@accentiostudios.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.8.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.38",
+    "@vercel/ncc": "^0.25.1",
+    "eslint": "^7.15.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}
