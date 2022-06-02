@@ -27,7 +27,6 @@ export class Action {
     private async getYamlContent(): Promise<string> {
         const pubspecFilePath = this.inputs.pubspecFilePath;
         const workspacePath = path.join(process.env.GITHUB_WORKSPACE || '', pubspecFilePath);
-        core.debug(`workspacePath: ${workspacePath}`);
 
 
         const fileContents = await fs.promises.readFile(workspacePath, { encoding: 'utf8' });

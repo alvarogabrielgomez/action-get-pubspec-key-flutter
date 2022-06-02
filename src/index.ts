@@ -5,10 +5,11 @@ import { Action } from './action';
 
 async function run() {
     try {
+        core.info(`Starting.`);
         const action = createAction()
         await action.perform();
     } catch (error: any) {
-        core.setFailed(error);      
+        core.setFailed(error);
     }
 
 }
