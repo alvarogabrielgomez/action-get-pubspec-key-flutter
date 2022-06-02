@@ -1,5 +1,5 @@
 {
-  "name": "github-actions-get-app-version-flutter",
+  "name": "action-get-pubspec-key-flutter",
   "version": "1.0.0",
   "description": "A Github Action to get the App Version from the pubspec file in Flutter App",
   "prepare": "tsc",
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alvarogabrielgomez/github-actions-get-app-version-flutter.git"
+    "url": "https://github.com/AccentioStudios/action-get-pubspec-key-flutter.git"
   },
   "keywords": [
     "actions",
     "node"
   ],
-  "author": "Alvaro Gomez <alvaro@accentiostudios.com>",
+  "author": "Accentio Studios <hellodevs@accentiostudios.com>",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.8.2",
