@@ -1,4 +1,4 @@
-name: "Get the Content of a Key from pubspec.yaml in a Flutter App"
+name: "An action to get the Content of a Key from pubspec.yaml in a Flutter App"
 
 description: "A Github Action to get the Content of a Key from pubspec.yaml in a Flutter App"
 author: "Accentio Studios"
